@@ -18,7 +18,7 @@ public class IntroActivity extends AppCompatActivity {
             e.printStackTrace();
         }
         Intent i = new Intent(this, MainActivity.class);
-        //startActivity(i);
-        //finish();
+        startActivity(i);
+        finish();
     }
 }
