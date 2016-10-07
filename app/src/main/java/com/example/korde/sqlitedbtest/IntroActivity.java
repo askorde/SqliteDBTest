@@ -22,7 +22,7 @@ public class IntroActivity extends AppCompatActivity {
 
         listView = (ListView)findViewById(R.id.listView0);
 
-        final String[] values = new String[] {"Staff Locator"};
+        final String[] values = new String[] {"Staff Locator","Notice Forum"};
         final ArrayList<String> list = new ArrayList<String>();
         for (int i = 0; i < values.length; ++i) {
             list.add(values[i]);
