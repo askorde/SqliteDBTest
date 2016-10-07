@@ -18,12 +18,13 @@ public class StaffListActivity extends AppCompatActivity {
 
     ListView lv;
     DBHelper myDbHelper;
+    TextView textView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_staff_list);
 
-
+        textView = (TextView)findViewById(R.id.textView);
         lv = (ListView)findViewById(R.id.listView2);
 
 
@@ -44,7 +45,7 @@ public class StaffListActivity extends AppCompatActivity {
 
         Bundle extras = getIntent().getExtras();
         String val = extras.getString("dept");
-
+        textView.setText("Staff List : "+val);
         List<Staff> staffList = null;
 
         if(val.equals("Administration")){
