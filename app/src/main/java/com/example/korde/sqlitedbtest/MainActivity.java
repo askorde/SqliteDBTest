@@ -10,6 +10,7 @@ import android.view.Window;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -27,12 +28,14 @@ public class MainActivity extends AppCompatActivity {
         requestWindowFeature(Window.FEATURE_ACTION_BAR);
         setContentView(R.layout.activity_main);
 
-        ActionBar mActionBar = getSupportActionBar();
-        if(mActionBar!=null) {
-            mActionBar.setTitle(R.string.app_name);
-            mActionBar.setIcon(R.mipmap.ic_launcher);
-            mActionBar.show();
-        }
+//        ActionBar mActionBar = getSupportActionBar();
+//        if(mActionBar!=null) {
+//            mActionBar.setTitle(R.string.app_name);
+//            mActionBar.setLogo(R.mipmap.ic_launcher);
+//            mActionBar.setDisplayUseLogoEnabled(true);
+//            mActionBar.setDisplayShowHomeEnabled(true);
+//            mActionBar.show();
+//        }
         lv = (ListView)findViewById(R.id.listView);
 
 

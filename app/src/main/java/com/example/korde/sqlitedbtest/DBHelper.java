@@ -82,7 +82,6 @@ public class DBHelper extends SQLiteOpenHelper {
                 BufferedReader i2 = new BufferedReader(new InputStreamReader(new FileInputStream(DB_PATH+"ver.txt")));
                 String ver2 = i2.readLine();
 
-            Toast.makeText(myContext,ver+" "+ver2,Toast.LENGTH_SHORT).show();
                 if(Integer.parseInt(ver)>Integer.parseInt(ver2))
                     return false;
             } catch (IOException e) {

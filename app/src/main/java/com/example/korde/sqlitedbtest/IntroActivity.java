@@ -1,6 +1,7 @@
 package com.example.korde.sqlitedbtest;
 
 import android.content.Intent;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -20,6 +21,15 @@ public class IntroActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_intro);
 
+        ActionBar mActionBar = getSupportActionBar();
+        if(mActionBar!=null) {
+            mActionBar.setTitle(R.string.app_name);
+            mActionBar.setLogo(R.mipmap.ic_launcher);
+            mActionBar.setDisplayUseLogoEnabled(true);
+            mActionBar.setDisplayShowHomeEnabled(true);
+            mActionBar.show();
+        }
+
         listView = (ListView)findViewById(R.id.listView0);
 
         final String[] values = new String[] {"Staff Locator","Notice Forum"};
@@ -31,9 +41,13 @@ public class IntroActivity extends AppCompatActivity {
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                //Toast.makeText(MainActivity.this,staffList.get(position).getExt(),Toast.LENGTH_SHORT).show();
-                Intent i = new Intent(IntroActivity.this, MainActivity.class);
-                startActivity(i);
+                Intent i=null;
+                switch(position){
+                    case 0:
+                        i = new Intent(IntroActivity.this, MainActivity.class);
+                }
+                if(i!=null)
+                    startActivity(i);
             }
         });
     }
